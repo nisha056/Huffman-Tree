@@ -1,3 +1,4 @@
+
 #ifndef BUTTON_H
 #define BUTTON_H
 #include <iostream>
@@ -5,7 +6,7 @@
 
 class Button {
 public:
-    Button (){};
+	Button() {};
 	Button(std::string buttonText, sf::Vector2f buttonSize, int charSize, sf::Color buttonColor, sf::Color textColor) {
 		button.setSize(buttonSize);
 		button.setFillColor(buttonColor);
@@ -16,11 +17,11 @@ public:
 
 		text.setString(buttonText);
 		text.setCharacterSize(charSize);
-		text.setColor(textColor);
+		text.setFillColor(textColor);
 	}
 
 	// Pass font by reference:
-	void setFont(sf::Font &fonts) {
+	void setFont(sf::Font& fonts) {
 		text.setFont(fonts);
 	}
 
@@ -29,7 +30,7 @@ public:
 	}
 
 	void setTextColor(sf::Color color) {
-		text.setColor(color);
+		text.setFillColor(color);
 	}
 
 	void setPosition(sf::Vector2f point) {
@@ -41,13 +42,13 @@ public:
 		text.setPosition(xPos, yPos);
 	}
 
-	void drawTo(sf::RenderWindow &window) {
+	void drawTo(sf::RenderWindow& window) {
 		window.draw(button);
 		window.draw(text);
 	}
 
 	// Check if the mouse is within the bounds of the button:
-	bool isMouseOver(sf::RenderWindow &window) {
+	bool isMouseOver(sf::RenderWindow& window) {
 		int mouseX = sf::Mouse::getPosition(window).x;
 		int mouseY = sf::Mouse::getPosition(window).y;
 
@@ -74,3 +75,4 @@ private:
 
 
 #endif // BUTTON_H
+
