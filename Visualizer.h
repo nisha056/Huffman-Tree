@@ -8,18 +8,22 @@
 class Visualizer
 {
 private:
-        sf::RenderWindow window;
-        Button setDataButton , treeButton;
-        Textbox textbox1;
-        sf::Font font;
-        Huffmann H;
+    sf::RenderWindow window;
+    Button setDataButton, treeButton, boxButton;
+    Textbox textbox1;
+    sf::RectangleShape OutlineBox1;
+    sf::RectangleShape drawingAreaOutline;
+    sf::Font font;
+    Huffmann H;
 public:
-        Visualizer();
-        void run();
-        void handleUserInput();
-        void drawtextbox(sf::RenderWindow &);
-        void render();
+    Visualizer();
+    void run();
+    void handleUserInput();
+    void drawtextbox(sf::RenderWindow&);
+    void render();
 
 };
+
+
 
 #endif // VISUALIZER_H
