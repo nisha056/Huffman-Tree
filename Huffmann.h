@@ -3,7 +3,7 @@
 #include<SFML/Graphics.hpp>
 # define Max_tree 100
 # define SIZE 26
-// node for huffmann tree
+//node for huffmann tree//
 class QueueNode
 {
 public:
