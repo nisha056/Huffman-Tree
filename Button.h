@@ -3,6 +3,7 @@
 #define BUTTON_H
 #include <iostream>
 #include <SFML/Graphics.hpp>
+//to create the button for making tree//
 
 class Button {
 public:
@@ -37,8 +38,8 @@ public:
 		button.setPosition(point);
 
 		// Center text on button:
-		float xPos = (point.x + btnWidth / 3) - (text.getLocalBounds().width / 2);
-		float yPos = (point.y + btnHeight / 3) - (text.getLocalBounds().height / 2);
+		float xPos = (point.x + btnWidth / 2.5) - (text.getLocalBounds().width / 2);
+		float yPos = (point.y + btnHeight / 2.5) - (text.getLocalBounds().height / 2);
 		text.setPosition(xPos, yPos);
 	}
 
