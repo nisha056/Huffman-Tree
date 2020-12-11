@@ -1,7 +1,5 @@
 #include "Visualizer.h"
 Visualizer::Visualizer() :window(sf::VideoMode(1000, 900), "Visualizer"),
-
-setDataButton("Set", sf::Vector2f(120, 50), 20, sf::Color::Green, sf::Color::Black),
 treeButton("Tree", sf::Vector2f(120, 50), 20, sf::Color::Green, sf::Color::Black),
 boxButton(" ", sf::Vector2f(400, 35), 20, sf::Color::White, sf::Color::Cyan), textbox1(20, sf::Color::Red, false)
 {
@@ -9,8 +7,6 @@ boxButton(" ", sf::Vector2f(400, 35), 20, sf::Color::White, sf::Color::Cyan), te
     {
         //error
     }
-    setDataButton.setPosition(sf::Vector2f(55, 55));
-    setDataButton.setFont(font);
     treeButton.setPosition(sf::Vector2f(825, 55));
     treeButton.setFont(font);
     boxButton.setPosition(sf::Vector2f(380, 80));
@@ -55,16 +51,6 @@ void Visualizer::handleUserInput()
             break;
         case sf::Event::EventType::MouseMoved:
         {
-            if (setDataButton.isMouseOver(window))
-            {
-                setDataButton.setBackColor(sf::Color::Red);
-
-            }
-            else
-            {
-                setDataButton.setBackColor(sf::Color::Green);
-            }
-
             if (treeButton.isMouseOver(window))
             {
                 treeButton.setBackColor(sf::Color::Red);
@@ -80,11 +66,6 @@ void Visualizer::handleUserInput()
             if (textbox1.isMouseOver(window))
             {
                 textbox1.setSelected(true);
-            }
-            else if (setDataButton.isMouseOver(window))
-            {
-               // H.setData();
-
             }
             else if (treeButton.isMouseOver(window))
             {
@@ -103,7 +84,6 @@ void Visualizer::handleUserInput()
 void Visualizer::render()
 {
     window.clear(sf::Color::White);
-    setDataButton.drawTo(window);
     treeButton.drawTo(window);
     boxButton.drawTo(window);
     textbox1.drawTo(window);
