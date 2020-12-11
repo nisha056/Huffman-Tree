@@ -9,7 +9,7 @@ class Visualizer
 {
 private:
     sf::RenderWindow window;
-    Button setDataButton, treeButton, boxButton;
+    Button  treeButton, boxButton;
     Textbox textbox1;
     sf::RectangleShape OutlineBox1;
     sf::RectangleShape drawingAreaOutline;
